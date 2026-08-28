@@ -1,63 +1,36 @@
-# Template
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-GitHub repository template with issue-driven workflow, automated pull requests, CI, and CalVer-based releases.
+## Getting Started
 
-## Overview
+First, run the development server:
 
-- **Issue templates** for Addition, Modification, Refactoring, Fix, Epic, and Idea
-- **Auto PR creation** when an issue is assigned (except for idea/epic)
-- **CI** on pull requests (with `ci-testing` label) and on push to `main`
-- **Release flow**: `main` → release PR → `release` branch → deploy and publish release notes (CalVer)
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Branches
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-| Branch   | Purpose |
-|----------|--------|
-| `main`   | Default branch. Feature PRs target this. Pushing here triggers a release-candidate PR to `release`. |
-| `release`| Production branch. Merging the release-candidate PR here runs deployment and publishes the release. |
+- You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit *the* file. **~~OK~~**
 
-The `release` branch is created automatically on the first run of **Prepare Release** if it does not exist.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Workflows
+## Learn More
 
-### Start Pull Request
+To learn more about Next.js, take a look at the following resources:
 
-- **Trigger:** Issue assigned
-- **Behavior:** Creates a branch and pull request linked to the issue (skipped for issues labeled `idea` or `epic`)
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Run Tests
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-- **Trigger:** Push to `main`, or pull request with `ci-testing` label (e.g. when review is requested)
-- **Behavior:** Runs build and tests (replace placeholder step with your real test commands)
+## Deploy on Vercel
 
-### Prepare Release
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-- **Trigger:** Push to `main`
-- **Behavior:** Ensures `release` exists; opens/updates a release-candidate PR from `main` to `release` using [git-pr-release](https://github.com/motemen/git-pr-release) (PRs must have label `release-candidate`)
-
-### Release
-
-- **Trigger:** Merge of a PR into `release`
-- **Behavior:** Runs deployment, then drafts and publishes a GitHub release with CalVer version and changelog from [release-drafter](https://github.com/release-drafter/release-drafter)
-
-## Issue types and release notes
-
-Release notes are generated from PR labels:
-
-- `addition` → Addition
-- `modification` → Modification
-- `refactoring` → Refactoring
-- `fix` → Fix
-
-Use the matching issue template so PRs get the right label when created from an issue.
-
-## Setup
-
-1. Use this repo as a template or copy the `.github/` directory into your project.
-2. In **Run Tests**, replace the placeholder step with your real build/test commands.
-3. In **Release**, replace the deployment placeholder with your deployment steps.
-4. If your default branch is not `main`, update the branch names in the workflows accordingly.
-
-## License
-
-See [LICENSE](LICENSE) if present.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

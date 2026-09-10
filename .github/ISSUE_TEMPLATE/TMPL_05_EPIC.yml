@@ -1,7 +1,7 @@
-name: Epic
+name: Big goal
 labels: ["epic"]
-title: Epic for ***
-description: Group and organize related issues under a single high-level overview of a larger goal.
+title: Goal ***
+description: Group several related practice ideas under one larger goal.
 body:
   - type: markdown
     attributes:

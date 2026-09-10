@@ -1,7 +1,7 @@
-name: Fix
+name: Fix a problem
 labels: ["fix"]
 title: Fix ***
-description: A change made to correct an error, bug, or unintended behavior in existing code.
+description: Report something that looks wrong or broken on the practice site.
 body:
   - type: markdown
     attributes:

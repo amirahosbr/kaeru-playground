@@ -1,7 +1,7 @@
-name: Refactoring
+name: Clean up files
 labels: ["refactoring"]
-title: Refactor ***
-description: A change made to existing code to improve its structure, readability, or maintainability without altering its behavior.
+title: Clean up ***
+description: Improve how the site files are organized, without changing what visitors see.
 body:
   - type: markdown
     attributes:

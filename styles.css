@@ -1,0 +1,302 @@
+@layer reset, base, theme, components;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  img,
+  svg {
+    max-inline-size: 100%;
+    display: block;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer theme {
+  :root {
+    --ink: #16302b;
+    --ink-soft: color-mix(in oklab, var(--ink) 72%, white);
+    --foam: #f3faf6;
+    --mist: #d7efe4;
+    --pond: #2f7a64;
+    --pond-deep: #1f5546;
+    --sky: #7eb8d4;
+    --coral: #e07a5f;
+    --coral-deep: #c45d42;
+    --glow: color-mix(in oklab, var(--sky) 55%, white);
+    --font-display: "Fraunces", "Palatino Linotype", Palatino, serif;
+    --font-body: "Outfit", "Trebuchet MS", sans-serif;
+    color-scheme: light;
+  }
+}
+
+@layer base {
+  body {
+    min-block-size: 100vh;
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+    line-height: 1.6;
+    color: var(--ink);
+    background: linear-gradient(180deg, #e7f4ee 0%, var(--foam) 42%, #e8f2f8 100%);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--pond);
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.75rem, 2.1rem + 3.4vw, 4.5rem);
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  }
+
+  p {
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  code {
+    font-size: 0.92em;
+    padding: 0.1em 0.35em;
+    border-radius: 0.35em;
+    background: color-mix(in oklab, var(--mist) 70%, white);
+  }
+}
+
+@layer components {
+  .top-bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.5rem;
+    inline-size: min(100% - 2rem, 68rem);
+    margin-inline: auto;
+    padding-block: 1.1rem 0.5rem;
+  }
+
+  .brand-mark {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--ink-soft);
+  }
+
+  nav a:hover {
+    color: var(--pond-deep);
+  }
+
+  nav a[aria-current="page"] {
+    color: var(--pond-deep);
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+  }
+
+  .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: clip;
+    min-block-size: min(88vh, 44rem);
+    display: grid;
+    align-items: center;
+  }
+
+  .hero-art {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-art svg {
+    inline-size: 100%;
+    block-size: 100%;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+    inline-size: min(100% - 2rem, 68rem);
+    margin-inline: auto;
+    padding-block: clamp(2rem, 8vh, 5rem);
+    display: grid;
+    gap: 1rem;
+    max-inline-size: 28rem;
+    animation: rise-in 700ms ease-out both;
+  }
+
+  .greeting {
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 1.1rem + 1vw, 1.85rem);
+    font-weight: 500;
+    color: var(--pond-deep);
+    animation: rise-in 800ms 100ms ease-out both;
+  }
+
+  .lede {
+    font-size: clamp(1.05rem, 1rem + 0.35vw, 1.25rem);
+    color: var(--ink-soft);
+  }
+
+  .cta-row {
+    margin-block-start: 0.5rem;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-block-size: 2.75rem;
+    padding: 0.7rem 1.35rem;
+    border-radius: 0.65rem;
+    background: var(--pond);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 24px color-mix(in oklab, var(--pond-deep) 28%, transparent);
+    transition:
+      background-color 180ms ease,
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .button:hover {
+    background: var(--pond-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px color-mix(in oklab, var(--pond-deep) 34%, transparent);
+  }
+
+  .button:active {
+    transform: translateY(0);
+  }
+
+  .tips,
+  .about,
+  footer {
+    inline-size: min(100% - 2rem, 68rem);
+    margin-inline: auto;
+  }
+
+  .tips,
+  .about {
+    margin-block-start: 2.75rem;
+    display: grid;
+    gap: 0.85rem;
+    max-inline-size: 40rem;
+    animation: rise-in 900ms 160ms ease-out both;
+  }
+
+  .tips ul {
+    margin: 0;
+    padding-inline-start: 1.2rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .about p {
+    color: var(--ink-soft);
+  }
+
+  footer {
+    margin-block: 3rem 2rem;
+    padding-block-start: 1.25rem;
+    border-block-start: 1px solid color-mix(in oklab, var(--pond) 18%, transparent);
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  .float-a {
+    transform-origin: center;
+    animation: drift 10s ease-in-out infinite alternate;
+  }
+
+  .float-b {
+    transform-origin: center;
+    animation: drift 12s ease-in-out infinite alternate-reverse;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.85rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 48rem) {
+  .hero {
+    min-block-size: min(92vh, 40rem);
+  }
+
+  .hero-copy {
+    max-inline-size: 28rem;
+  }
+
+  .hero-art {
+    opacity: 0.72;
+  }
+}

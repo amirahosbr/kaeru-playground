@@ -1,7 +1,7 @@
-name: Modification
+name: Change something
 labels: ["modification"]
-title: Modify ***
-description: A change made to existing code to alter its behavior or add new functionality.
+title: Change ***
+description: Ask to change wording, colors, layout, or other parts of the practice site.
 body:
   - type: markdown
     attributes:

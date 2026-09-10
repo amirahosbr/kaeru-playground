@@ -188,11 +188,11 @@
     min-block-size: 2.75rem;
     padding: 0.7rem 1.35rem;
     border-radius: 0.65rem;
-    background: var(--coral);
+    background: var(--pond);
     color: white;
     font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 10px 24px color-mix(in oklab, var(--coral-deep) 28%, transparent);
+    box-shadow: 0 10px 24px color-mix(in oklab, var(--pond-deep) 28%, transparent);
     transition:
       background-color 180ms ease,
       transform 180ms ease,
@@ -200,9 +200,9 @@
   }
 
   .button:hover {
-    background: var(--coral-deep);
+    background: var(--pond-deep);
     transform: translateY(-2px);
-    box-shadow: 0 14px 28px color-mix(in oklab, var(--coral-deep) 34%, transparent);
+    box-shadow: 0 14px 28px color-mix(in oklab, var(--pond-deep) 34%, transparent);
   }
 
   .button:active {

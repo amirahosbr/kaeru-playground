@@ -160,7 +160,7 @@
     padding-block: clamp(2rem, 8vh, 5rem);
     display: grid;
     gap: 1rem;
-    max-inline-size: 34rem;
+    max-inline-size: 28rem;
     animation: rise-in 700ms ease-out both;
   }
 

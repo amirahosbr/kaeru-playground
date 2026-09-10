@@ -35,6 +35,10 @@ jobs:
               repo: context.repo.repo,
               labels: ["ci-testing"]
             })
-      - name: Build and run tests
+      - name: Check practice site files
         run: |
-          echo "Build and run tests here"
+          test -f index.html
+          test -f about.html
+          test -f styles.css
+          grep -q "こんにちは" index.html
+          echo "Practice site files look good."

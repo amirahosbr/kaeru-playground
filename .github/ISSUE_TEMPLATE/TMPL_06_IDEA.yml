@@ -1,7 +1,7 @@
 name: Idea
 labels: ["idea"]
-title: Idea of ***
-description: Capture potential features, improvements, or concepts for future consideration.
+title: Idea ***
+description: Capture a practice idea for later — no rush to build it now.
 body:
   - type: markdown
     attributes:

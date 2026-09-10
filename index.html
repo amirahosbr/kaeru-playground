@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kaeru Playground</title>
+    <meta
+      name="description"
+      content="A safe practice website for learning to edit pages in Kaeru."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <a class="brand-mark" href="index.html">Kaeru Playground</a>
+      <nav aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-copy">
+          <p class="greeting" lang="ja">こんにちは</p>
+          <h1 id="hero-heading">Kaeru Playground</h1>
+          <p class="lede">
+            A friendly mini website you can open in Kaeru and change with plain
+            English — no coding experience needed.
+          </p>
+          <div class="cta-row">
+            <a class="button" href="about.html">See how it works</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#9ec9e0" />
+                <stop offset="55%" stop-color="#d7efe4" />
+                <stop offset="100%" stop-color="#8fbfa8" />
+              </linearGradient>
+              <linearGradient id="pond" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#3f8f76" />
+                <stop offset="100%" stop-color="#245f4d" />
+              </linearGradient>
+            </defs>
+            <rect width="640" height="480" fill="url(#sky)" />
+            <ellipse class="float-a" cx="320" cy="320" rx="260" ry="90" fill="url(#pond)" opacity="0.92" />
+            <ellipse class="float-b" cx="180" cy="300" rx="70" ry="28" fill="#4fa888" />
+            <ellipse class="float-b" cx="420" cy="290" rx="88" ry="32" fill="#57b092" />
+            <g class="float-a">
+              <ellipse cx="250" cy="285" rx="54" ry="22" fill="#6fc4a2" />
+              <circle cx="268" cy="268" r="18" fill="#f4f7ee" />
+              <circle cx="268" cy="268" r="10" fill="#e8c96a" />
+            </g>
+            <g class="float-b">
+              <ellipse cx="470" cy="275" rx="46" ry="18" fill="#79c9ab" />
+              <path
+                d="M455 250c18-28 42-34 58-18-22 8-36 24-42 42-10-6-16-14-16-24z"
+                fill="#2f7a64"
+              />
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      <section class="tips" aria-labelledby="tips-heading">
+        <h2 id="tips-heading">Try asking Kaeru</h2>
+        <p>After you open this folder in Kaeru, try requests like these:</p>
+        <ul>
+          <li>“Make the button green”</li>
+          <li>「見出しを大きくして」</li>
+          <li>“Change the greeting to Good morning”</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>Safe to edit. Nothing here is connected to a real product.</p>
+    </footer>
+  </body>
+</html>

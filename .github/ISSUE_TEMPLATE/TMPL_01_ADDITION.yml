@@ -1,7 +1,7 @@
-name: Addition
+name: Add something new
 labels: ["addition"]
 title: Add ***
-description: A format for changes made to introduce new code, features, or functionality that did not exist before.
+description: Suggest something new for the practice site (a section, page, or idea to try).
 body:
   - type: markdown
     attributes:

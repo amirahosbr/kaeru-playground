@@ -27,6 +27,38 @@
 
     <main>
       <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" role="presentation" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0.2" y2="1">
+                <stop offset="0%" stop-color="#cfe6f2" />
+                <stop offset="45%" stop-color="#e7f5ee" />
+                <stop offset="100%" stop-color="#b7dcc8" />
+              </linearGradient>
+              <linearGradient id="pond" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#3f8f76" />
+                <stop offset="100%" stop-color="#245f4d" />
+              </linearGradient>
+            </defs>
+            <rect width="1440" height="900" fill="url(#sky)" />
+            <ellipse class="float-a" cx="1020" cy="620" rx="420" ry="150" fill="url(#pond)" opacity="0.94" />
+            <ellipse class="float-b" cx="820" cy="580" rx="110" ry="42" fill="#4fa888" />
+            <ellipse class="float-b" cx="1180" cy="560" rx="140" ry="50" fill="#57b092" />
+            <g class="float-a">
+              <ellipse cx="940" cy="545" rx="86" ry="34" fill="#6fc4a2" />
+              <circle cx="970" cy="515" r="28" fill="#f4f7ee" />
+              <circle cx="970" cy="515" r="15" fill="#e8c96a" />
+            </g>
+            <g class="float-b">
+              <ellipse cx="1240" cy="530" rx="72" ry="28" fill="#79c9ab" />
+              <path
+                d="M1215 490c28-44 66-54 90-28-34 12-56 38-66 66-16-10-24-22-24-38z"
+                fill="#2f7a64"
+              />
+            </g>
+          </svg>
+        </div>
+
         <div class="hero-copy">
           <p class="greeting" lang="ja">こんにちは</p>
           <h1 id="hero-heading">Kaeru Playground</h1>
@@ -37,38 +69,6 @@
           <div class="cta-row">
             <a class="button" href="about.html">See how it works</a>
           </div>
-        </div>
-
-        <div class="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" role="presentation">
-            <defs>
-              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#9ec9e0" />
-                <stop offset="55%" stop-color="#d7efe4" />
-                <stop offset="100%" stop-color="#8fbfa8" />
-              </linearGradient>
-              <linearGradient id="pond" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#3f8f76" />
-                <stop offset="100%" stop-color="#245f4d" />
-              </linearGradient>
-            </defs>
-            <rect width="640" height="480" fill="url(#sky)" />
-            <ellipse class="float-a" cx="320" cy="320" rx="260" ry="90" fill="url(#pond)" opacity="0.92" />
-            <ellipse class="float-b" cx="180" cy="300" rx="70" ry="28" fill="#4fa888" />
-            <ellipse class="float-b" cx="420" cy="290" rx="88" ry="32" fill="#57b092" />
-            <g class="float-a">
-              <ellipse cx="250" cy="285" rx="54" ry="22" fill="#6fc4a2" />
-              <circle cx="268" cy="268" r="18" fill="#f4f7ee" />
-              <circle cx="268" cy="268" r="10" fill="#e8c96a" />
-            </g>
-            <g class="float-b">
-              <ellipse cx="470" cy="275" rx="46" ry="18" fill="#79c9ab" />
-              <path
-                d="M455 250c18-28 42-34 58-18-22 8-36 24-42 42-10-6-16-14-16-24z"
-                fill="#2f7a64"
-              />
-            </g>
-          </svg>
         </div>
       </section>
 

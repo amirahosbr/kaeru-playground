@@ -51,9 +51,7 @@
     font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
     line-height: 1.6;
     color: var(--ink);
-    background:
-      radial-gradient(ellipse 90% 55% at 80% 0%, var(--glow), transparent 58%),
-      linear-gradient(180deg, #e7f4ee 0%, var(--foam) 40%, #e8f2f8 100%);
+    background: linear-gradient(180deg, #e7f4ee 0%, var(--foam) 42%, #e8f2f8 100%);
   }
 
   :focus-visible {
@@ -94,6 +92,8 @@
 
 @layer components {
   .top-bar {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -133,33 +133,12 @@
   }
 
   .hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: end;
-    min-block-size: min(88vh, 44rem);
     position: relative;
     isolation: isolate;
     overflow: clip;
-    background:
-      linear-gradient(
-        120deg,
-        color-mix(in oklab, white 40%, transparent),
-        transparent 45%
-      ),
-      radial-gradient(ellipse 70% 60% at 70% 40%, var(--mist), transparent 60%);
-  }
-
-  .hero-copy {
-    inline-size: min(100% - 2rem, 68rem);
-    margin-inline: auto;
-    padding-block: clamp(2rem, 8vh, 5rem) 2rem;
+    min-block-size: min(88vh, 44rem);
     display: grid;
-    gap: 1rem;
-    max-inline-size: 36rem;
-    justify-self: start;
-    margin-inline-start: max(1rem, calc((100% - 68rem) / 2 + 1rem));
-    animation: rise-in 700ms ease-out both;
-    z-index: 1;
+    align-items: center;
   }
 
   .hero-art {
@@ -171,7 +150,18 @@
   .hero-art svg {
     inline-size: 100%;
     block-size: 100%;
-    object-fit: cover;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+    inline-size: min(100% - 2rem, 68rem);
+    margin-inline: auto;
+    padding-block: clamp(2rem, 8vh, 5rem);
+    display: grid;
+    gap: 1rem;
+    max-inline-size: 34rem;
+    animation: rise-in 700ms ease-out both;
   }
 
   .greeting {
@@ -303,11 +293,10 @@
   }
 
   .hero-copy {
-    margin-inline: 1rem;
-    max-inline-size: none;
+    max-inline-size: 28rem;
   }
 
   .hero-art {
-    opacity: 0.55;
+    opacity: 0.72;
   }
 }

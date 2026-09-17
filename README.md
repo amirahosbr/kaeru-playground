@@ -10,7 +10,7 @@ You do not need coding experience. Open this folder, look at the page, and ask K
 - `about.html` — a short about page
 - `styles.css` — colors, fonts, and layout
 
-That is the whole site. No install steps. No build tools.
+That is the whole site. No install steps. No build tools. Hello worllld d
 
 ## How to practice in Kaeru
 

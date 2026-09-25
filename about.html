@@ -22,6 +22,14 @@
       <nav aria-label="Main">
         <a href="index.html">Home</a>
         <a href="about.html" aria-current="page">About</a>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Switch between light and dark theme"
+        >
+          🌙 Dark
+        </button>
       </nav>
     </header>
 
@@ -48,6 +56,7 @@
           <li>“Create a local branch for this change and open a pull request on GitHub.”</li>
           <li>“Add a brand-new page and link it from the top bar.”</li>
           <li>“Tidy up this text so it sounds friendlier.”</li>
+          <li lang="ja">「変更用のローカルブランチを作って、プルリクエストを出して」</li>
         </ul>
       </section>
     </main>
@@ -55,5 +64,28 @@
     <footer>
       <p>Safe to edit. Nothing here is connected to a real product.</p>
     </footer>
+    <script>
+      const toggle = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        root.setAttribute('data-theme', savedTheme);
+        updateLabel(savedTheme);
+      }
+      toggle.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        if (next === 'dark') {
+          root.setAttribute('data-theme', 'dark');
+        } else {
+          root.removeAttribute('data-theme');
+        }
+        localStorage.setItem('theme', next);
+        updateLabel(next);
+      });
+      function updateLabel(theme) {
+        toggle.textContent = theme === 'dark' ? '☀️ Light' : '🌙 Dark';
+      }
+    </script>
   </body>
 </html>

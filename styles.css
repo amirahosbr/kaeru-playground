@@ -132,6 +132,31 @@
     text-underline-offset: 0.3em;
   }
 
+  .theme-toggle {
+    background: color-mix(in oklab, var(--mist) 60%, transparent);
+    border: 1px solid color-mix(in oklab, var(--pond) 30%, transparent);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: background 160ms ease, border-color 160ms ease;
+  }
+
+  .theme-toggle:hover {
+    background: var(--mist);
+    border-color: var(--pond);
+  }
+
+  :root[data-theme="dark"] .hero-art {
+    opacity: 0.35;
+  }
+
   .hero {
     position: relative;
     isolation: isolate;

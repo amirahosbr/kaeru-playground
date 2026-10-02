@@ -271,6 +271,110 @@
     font-size: 0.95rem;
   }
 
+  .practice-examples {
+    inline-size: min(100% - 2rem, 68rem);
+    margin-inline: auto;
+    margin-block-start: 2.75rem;
+    display: grid;
+    gap: 0.85rem;
+    animation: rise-in 900ms 200ms ease-out both;
+  }
+
+  .practice-examples h2 {
+    margin-bottom: 0.25rem;
+  }
+
+  .practice-examples > p {
+    color: var(--ink-soft);
+    margin-bottom: 0.5rem;
+  }
+
+  .examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.25rem;
+    margin-block-start: 1rem;
+  }
+
+  .example-card {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    background: color-mix(in oklab, var(--mist) 40%, white);
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .example-card {
+      background: #1a2f2c;
+    }
+  }
+
+  .example-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    font-family: var(--font-body);
+  }
+
+  .example-instruction {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0;
+    font-style: italic;
+  }
+
+  .example-preview {
+    display: grid;
+    gap: 0.5rem;
+    padding-block: 0.75rem;
+    border-top: 1px solid color-mix(in oklab, var(--pond) 12%, transparent);
+    border-bottom: 1px solid color-mix(in oklab, var(--pond) 12%, transparent);
+  }
+
+  .example-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: default;
+  }
+
+  .example-btn-original {
+    background: var(--pond);
+    color: white;
+  }
+
+  .example-btn-changed {
+    background: #4b7dd4;
+    color: white;
+  }
+
+  .example-text-before {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .example-text-after {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .example-text-small {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .example-text-large {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
   .float-a {
     transform-origin: center;
     animation: drift 10s ease-in-out infinite alternate;

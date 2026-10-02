@@ -375,6 +375,57 @@
     margin: 0;
   }
 
+  .example-code {
+    margin-block-start: 0.75rem;
+    padding-block-start: 0.75rem;
+    border-block-start: 1px solid color-mix(in oklab, var(--pond) 12%, transparent);
+  }
+
+  .example-code summary {
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--pond);
+    padding: 0.35rem 0;
+    user-select: none;
+  }
+
+  .example-code summary:hover {
+    text-decoration: underline;
+  }
+
+  .example-code pre {
+    margin: 0.5rem 0 0 0;
+    padding: 0.75rem;
+    background: color-mix(in oklab, var(--mist) 40%, white);
+    border-radius: 0.4rem;
+    overflow-x: auto;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .example-code code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+    color: var(--ink);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .example-code pre {
+      background: #1a2f2c;
+    }
+
+    .example-code code {
+      color: #e8e8e8;
+    }
+
+    .example-code summary {
+      color: #5edcb8;
+    }
+  }
+
   .float-a {
     transform-origin: center;
     animation: drift 10s ease-in-out infinite alternate;

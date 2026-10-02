@@ -167,6 +167,37 @@ CSS:
 }</code></pre>
             </details>
           </div>
+
+          <div class="example-card">
+            <h3>Adjust spacing</h3>
+            <p class="example-instruction">Ask: "Add more space between items"</p>
+            <div class="example-preview">
+              <div class="example-list">
+                <div class="example-list-item example-list-tight">Item A</div>
+                <div class="example-list-item example-list-tight">Item B</div>
+                <div class="example-list-item example-list-tight">Item C</div>
+              </div>
+              <div class="example-list" style="margin-block-start: 1rem;">
+                <div class="example-list-item example-list-loose">Item A</div>
+                <div class="example-list-item example-list-loose">Item B</div>
+                <div class="example-list-item example-list-loose">Item C</div>
+              </div>
+            </div>
+            <details class="example-code">
+              <summary>View the code</summary>
+              <pre><code>&lt;style&gt;
+  .item {
+    padding: 0.5rem;
+    margin-block-end: 0.25rem;
+  }
+  /* Change to: */
+  .item {
+    padding: 0.75rem;
+    margin-block-end: 0.75rem;
+  }
+&lt;/style&gt;</code></pre>
+            </details>
+          </div>
         </div>
       </section>
     </main>

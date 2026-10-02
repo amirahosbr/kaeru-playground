@@ -144,6 +144,29 @@
 &lt;/style&gt;</code></pre>
             </details>
           </div>
+
+          <div class="example-card">
+            <h3>Style form fields</h3>
+            <p class="example-instruction">Ask: "Make the input border blue"</p>
+            <div class="example-preview">
+              <label class="example-label" for="example-input">Your name</label>
+              <input class="example-input example-input-original" id="example-input" type="text" placeholder="Original style" />
+              <input class="example-input example-input-changed" type="text" placeholder="Changed style" />
+            </div>
+            <details class="example-code">
+              <summary>View the code</summary>
+              <pre><code>&lt;input class="field" type="text" /&gt;
+
+CSS:
+.field {
+  border: 1px solid #ccc;
+}
+/* Change to: */
+.field {
+  border: 2px solid #4b7dd4;
+}</code></pre>
+            </details>
+          </div>
         </div>
       </section>
     </main>

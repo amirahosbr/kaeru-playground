@@ -426,6 +426,50 @@
     }
   }
 
+  .example-label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-block-end: 0.35rem;
+    color: var(--ink);
+  }
+
+  .example-input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.95rem;
+    border-radius: 0.4rem;
+    font-family: var(--font-body);
+    margin-block-end: 0.5rem;
+  }
+
+  .example-input-original {
+    border: 1px solid #d0d0d0;
+    color: var(--ink);
+    background: white;
+  }
+
+  .example-input-changed {
+    border: 2px solid #4b7dd4;
+    color: var(--ink);
+    background: white;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .example-input-original {
+      border-color: #4a4a4a;
+      background: #1a2a29;
+      color: #e8e8e8;
+    }
+
+    .example-input-changed {
+      border-color: #5edcb8;
+      background: #1a2a29;
+      color: #e8e8e8;
+    }
+  }
+
   .float-a {
     transform-origin: center;
     animation: drift 10s ease-in-out infinite alternate;

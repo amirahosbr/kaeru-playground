@@ -40,7 +40,22 @@
     --glow: color-mix(in oklab, var(--sky) 55%, white);
     --font-display: "Fraunces", "Palatino Linotype", Palatino, serif;
     --font-body: "Outfit", "Trebuchet MS", sans-serif;
-    color-scheme: light;
+    color-scheme: light dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8e8e8;
+      --ink-soft: #b8b8b8;
+      --foam: #0f1a1a;
+      --mist: #3a5652;
+      --pond: #5edcb8;
+      --pond-deep: #4ec4a3;
+      --sky: #8fd4e5;
+      --coral: #ff9880;
+      --coral-deep: #ffb8a0;
+      --glow: color-mix(in oklab, var(--sky) 35%, #0f1a1a);
+    }
   }
 }
 
@@ -52,6 +67,12 @@
     line-height: 1.6;
     color: var(--ink);
     background: linear-gradient(180deg, #e7f4ee 0%, var(--foam) 42%, #e8f2f8 100%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: linear-gradient(180deg, #1a2622 0%, #0f1a1a 42%, #1a2428 100%);
+    }
   }
 
   :focus-visible {
@@ -87,6 +108,12 @@
     padding: 0.1em 0.35em;
     border-radius: 0.35em;
     background: color-mix(in oklab, var(--mist) 70%, white);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    code {
+      background: #1a2f2c;
+    }
   }
 }
 

@@ -557,6 +557,50 @@
     }
   }
 
+  .example-hover-btn {
+    padding: 0.5rem 1rem;
+    margin-inline-end: 0.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 180ms ease;
+  }
+
+  .example-hover-basic {
+    background: var(--pond);
+    color: white;
+  }
+
+  .example-hover-interactive {
+    background: var(--pond);
+    color: white;
+  }
+
+  .example-hover-interactive:hover {
+    background: var(--pond-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .example-hover-btn {
+      background: #5edcb8;
+      color: #0f1a1a;
+    }
+
+    .example-hover-interactive {
+      background: #5edcb8;
+      color: #0f1a1a;
+    }
+
+    .example-hover-interactive:hover {
+      background: #4ec4a3;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+  }
+
   .float-a {
     transform-origin: center;
     animation: drift 10s ease-in-out infinite alternate;

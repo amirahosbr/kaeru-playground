@@ -344,6 +344,36 @@
     color: var(--ink-soft);
   }
 
+  .glossary {
+    display: grid;
+    gap: 1rem;
+    margin-block: 1rem 0;
+  }
+
+  .glossary dt {
+    font-weight: 600;
+    color: var(--ink);
+    margin-block-start: 0.5rem;
+  }
+
+  .glossary dd {
+    margin-inline-start: 0;
+    margin-block-end: 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  .glossary dd code {
+    background: color-mix(in oklab, var(--mist) 40%, white);
+    font-size: 0.9em;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .glossary dd code {
+      background: #1a2f2c;
+    }
+  }
+
   footer {
     margin-block: 3rem 2rem;
     padding-block-start: 1.25rem;

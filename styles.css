@@ -245,7 +245,8 @@
 
   .tips,
   .about,
-  .learning-path {
+  .learning-path,
+  .quick-tips {
     margin-block-start: 2.75rem;
     display: grid;
     gap: 0.85rem;
@@ -286,8 +287,91 @@
     }
   }
 
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1rem;
+    margin-block-start: 1rem;
+  }
+
+  .tip-card {
+    padding: 1rem;
+    background: color-mix(in oklab, var(--mist) 40%, white);
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .tip-card h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .tip-card pre {
+    margin: 0;
+    padding: 0.75rem;
+    background: white;
+    border-radius: 0.3rem;
+    overflow-x: auto;
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .tip-card code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: var(--ink);
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .tip-card {
+      background: #1a2f2c;
+    }
+
+    .tip-card pre {
+      background: #0f1a1a;
+    }
+
+    .tip-card code {
+      color: #e8e8e8;
+    }
+  }
+
   .about p {
     color: var(--ink-soft);
+  }
+
+  .glossary {
+    display: grid;
+    gap: 1rem;
+    margin-block: 1rem 0;
+  }
+
+  .glossary dt {
+    font-weight: 600;
+    color: var(--ink);
+    margin-block-start: 0.5rem;
+  }
+
+  .glossary dd {
+    margin-inline-start: 0;
+    margin-block-end: 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  .glossary dd code {
+    background: color-mix(in oklab, var(--mist) 40%, white);
+    font-size: 0.9em;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .glossary dd code {
+      background: #1a2f2c;
+    }
   }
 
   footer {
@@ -554,6 +638,50 @@
     .example-card-styled {
       border-color: #4a4a4a;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .example-hover-btn {
+    padding: 0.5rem 1rem;
+    margin-inline-end: 0.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 180ms ease;
+  }
+
+  .example-hover-basic {
+    background: var(--pond);
+    color: white;
+  }
+
+  .example-hover-interactive {
+    background: var(--pond);
+    color: white;
+  }
+
+  .example-hover-interactive:hover {
+    background: var(--pond-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .example-hover-btn {
+      background: #5edcb8;
+      color: #0f1a1a;
+    }
+
+    .example-hover-interactive {
+      background: #5edcb8;
+      color: #0f1a1a;
+    }
+
+    .example-hover-interactive:hover {
+      background: #4ec4a3;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
   }
 
